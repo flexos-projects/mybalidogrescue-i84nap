@@ -1,111 +1,69 @@
 ---
-id: "006-design"
-title: "Design System"
+id: 006-design
+title: Design System & Branding
+description: The visual identity, color palette, typography, and overall user experience principles.
 type: doc
 subtype: core
 status: draft
 sequence: 6
-tags: [design, brand, colors, typography, components]
+tags:
+  - design
+  - branding
+  - ui
+  - ux
+createdAt: '2023-10-27T10:05:00Z'
+updatedAt: '2023-10-27T10:05:00Z'
 ---
 
-# Design System
+## 1. Design Philosophy
 
-> The visual identity and component language of the product. Everything a designer or developer needs to build consistent UI.
+The design of the Bali Dog Rescue platform must be **compassionate, hopeful, and engaging**. Our goal is to create a user experience that is both emotionally resonant and highly functional. The design should build trust, encourage action, and reflect the professional and caring nature of our organization. We will prioritize clarity, simplicity, and accessibility to ensure the platform is usable by a diverse, global audience.
 
-## Brand Voice
+**Core Principles:**
 
-How does this product speak? Describe the tone, personality, and communication style:
+*   **Story-First:** The design will prioritize high-quality imagery and compelling narratives. Photography and videography of the dogs are our most powerful assets and should be featured prominently.
+*   **Clarity Over Clutter:** Interfaces will be clean, with clear calls-to-action. We will avoid visual noise that could distract users from our primary goals: adoption, donation, and volunteering.
+*   **Trust and Transparency:** The design must feel secure and professional, especially on pages involving payments (`/donate`) and personal information (`/auth`, `/dashboard`).
+*   **Mobile-First:** With a global audience, we anticipate significant mobile traffic. All pages and components will be designed with a responsive, mobile-first approach to ensure a seamless experience on any device.
 
-- **Tone:** (professional, casual, playful, authoritative?)
-- **Voice:** (first person, second person, third person?)
-- **Personality traits:** (3-4 adjectives that describe the brand)
-- **Do:** (examples of on-brand copy)
-- **Don't:** (examples of off-brand copy)
+## 2. Branding & Vibe
 
-## Color System
+*   **Vibe:** The overall feeling should be one of **hope and positivity**. While we are addressing a serious problem, the user should feel empowered and inspired to help, not discouraged by overwhelming sadness. The tone should be welcoming and encouraging.
+*   **Logo:** A clean, simple logo that incorporates a dog silhouette and perhaps a heart or a subtle nod to Bali (e.g., a frangipani flower). It must be versatile for use on the website, social media, and merchandise.
+*   **Imagery:** All photography should be high-quality, well-lit, and focus on the dogs' personalities. We want to show them as hopeful and resilient individuals deserving of a loving home.
 
-### Primary Palette
+## 3. Color Palette
 
-- **Primary:** #000000 (main brand color, used for CTAs and key elements)
-- **Accent:** #000000 (complementary color for highlights and secondary actions)
+The color palette is chosen to be modern, clean, and welcoming, reflecting the tropical environment of Bali while maintaining a professional feel.
 
-### Neutral Palette
+*   **Primary Color:** `#06b6d4` (Cyan)
+    *   **Usage:** Used for primary buttons, links, active navigation states, and key calls-to-action. It's an optimistic and trustworthy color that evokes the sea and sky.
+*   **Accent Color:** `#f97316` (Orange)
+    *   **Usage:** Used sparingly for secondary CTAs, highlights, or important notifications. It's a warm, energetic color that provides a strong contrast to the primary cyan.
+*   **Neutral Dark:** `#1f2937` (Cool Gray)
+    *   **Usage:** For all body text, headlines, and primary icons. It's a modern, legible alternative to pure black.
+*   **Neutral Light:** `#f9fafb` (Off-White)
+    *   **Usage:** For page backgrounds and content containers. It provides a clean, soft backdrop that allows the content and imagery to stand out.
+*   **Supporting Colors:**
+    *   **Success:** A gentle green (`#10b981`) for success messages and confirmations.
+    *   **Warning/Error:** A soft red (`#ef4444`) for error messages and critical alerts.
 
-- **Dark:** #000000 (text, headings)
-- **Medium:** #000000 (secondary text, borders)
-- **Light:** #000000 (backgrounds, cards)
-- **White:** #ffffff (page background)
+## 4. Typography
 
-### Semantic Colors
+Typography will be clean, modern, and highly legible across all devices.
 
-- **Success:** #22c55e
-- **Warning:** #f59e0b
-- **Error:** #ef4444
-- **Info:** #3b82f6
+*   **Font Family:** **Inter**
+    *   **Rationale:** Inter is a variable font designed specifically for computer screens. It offers excellent readability at all sizes and weights, making it perfect for both UI elements and long-form content like dog stories.
+*   **Hierarchy:**
+    *   **Headings (h1, h2, h3):** Inter Bold, using a clear size scale (e.g., 36px, 24px, 20px) to establish a strong visual hierarchy.
+    *   **Body Text:** Inter Regular, set at a comfortable size (16px) with adequate line spacing (1.5) for readability.
+    *   **UI Elements (Buttons, Labels):** Inter Medium or SemiBold to ensure they are distinct and easy to read.
 
-### Color Usage
+## 5. UI Components & Patterns
 
-- Primary is used for: CTAs, links, active states, primary navigation
-- Accent is used for: secondary buttons, highlights, badges
-- Never use more than 3 colors on a single component
+We will utilize a component-based approach, likely using a framework like Nuxt UI, to ensure consistency across the platform.
 
-## Typography
-
-### Font Stack
-
-- **Headings:** (font family, weights used)
-- **Body:** (font family, weights used)
-- **Mono:** (font family, for code/data)
-
-### Scale
-
-| Level | Size | Weight | Line Height | Use |
-|-------|------|--------|-------------|-----|
-| H1 | 2.5rem | 700 | 1.2 | Page titles |
-| H2 | 2rem | 600 | 1.3 | Section headers |
-| H3 | 1.5rem | 600 | 1.4 | Card titles |
-| Body | 1rem | 400 | 1.6 | Paragraphs |
-| Small | 0.875rem | 400 | 1.5 | Captions, labels |
-
-## Component Patterns
-
-### Buttons
-
-- Primary: filled with primary color, white text
-- Secondary: outlined with primary color
-- Ghost: text only, no background
-- Sizes: sm (32px), md (40px), lg (48px)
-- All buttons have minimum 44px touch target on mobile
-
-### Cards
-
-- Background: white (light mode) / dark neutral (dark mode)
-- Border radius: 12px
-- Padding: 16px (mobile), 24px (desktop)
-- Shadow: subtle on hover
-
-### Forms
-
-- Labels above inputs
-- Inline validation messages below fields
-- Input height: 44px minimum (mobile touch target)
-- Focus state: primary color ring
-
-## Layout Patterns
-
-- **Desktop:** Sidebar (240px) + main content area
-- **Tablet:** Collapsible sidebar + full-width content
-- **Mobile:** Bottom navigation (56px) + full-width content
-- **Max content width:** 1200px, centered
-
-## Spacing System
-
-Base unit: 4px. Use multiples: 4, 8, 12, 16, 24, 32, 48, 64, 96.
-
-## Accessibility
-
-- Minimum contrast ratio: 4.5:1 (AA) for body text, 3:1 for large text
-- Focus indicators on all interactive elements
-- Touch targets minimum 44x44px
-- Screen reader support for all dynamic content
-- Reduced motion support via `prefers-reduced-motion`
+*   **Buttons:** Primary buttons will use the `#06b6d4` color with white text. Secondary buttons will be outlined or use the accent color. They will have clear hover and active states.
+*   **Forms:** Inputs will be clean and spacious with clear labels and validation states. Multi-step forms (like the adoption application) will include a progress indicator.
+*   **Cards:** Dog profiles (`/adopt`) and volunteer opportunities (`/volunteer`) will be displayed using a consistent card component, featuring an image, title, key details, and a clear link to the details page.
+*   **Navigation:** A persistent sidebar or top navigation bar will provide easy access to Home, Adopt, Donate, and Volunteer. For logged-in users, a link to their Dashboard will be prominent.
